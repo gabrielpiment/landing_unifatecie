@@ -78,7 +78,6 @@ const allCourses = [
     { name: "História", category: "Licenciatura", duration: "4 Anos", icon: "history_edu" },
     { name: "Letras Português / Inglês", category: "Licenciatura", duration: "4 Anos", icon: "language" },
     { name: "Letras Português / Libras", category: "Licenciatura", duration: "4 Anos", icon: "sign_language" },
-    { name: "Letras Português / Libras", category: "Licenciatura", duration: "4 Anos", icon: "sign_language" },
     { name: "Matemática", category: "Licenciatura", duration: "4 Anos", icon: "calculate" },
     { name: "Música", category: "Licenciatura", duration: "4 Anos", icon: "music_note" },
     { name: "Pedagogia", category: "Licenciatura", duration: "4 Anos", icon: "menu_book" },
@@ -87,6 +86,11 @@ const allCourses = [
     // 2ª Graduação em 1 Ano
     { name: "Segunda Graduação em 1 Ano", category: "2grad", duration: "1 Ano", icon: "fast_forward" }
 ];
+
+// Pagination Logic
+let displayLimit = 9;
+const initialLimit = 9;
+let currentFilteredList = [];
 
 // Intersection Observer for Animations
 const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
@@ -103,16 +107,23 @@ const observer = new IntersectionObserver((entries) => {
 function renderCourses(list) {
     const grid = document.getElementById('course-grid');
     const noResults = document.getElementById('no-results');
+    const loadMoreContainer = document.getElementById('load-more-container');
+    
     grid.innerHTML = '';
 
     if (list.length === 0) {
         noResults.classList.remove('hidden');
+        loadMoreContainer.classList.add('hidden');
         return;
     }
 
     noResults.classList.add('hidden');
+    
+    // Check if we are on desktop to apply limit
+    const isDesktop = window.innerWidth >= 768;
+    const coursesToDisplay = isDesktop ? list.slice(0, displayLimit) : list;
 
-    list.forEach(course => {
+    coursesToDisplay.forEach(course => {
         const card = document.createElement('div');
         card.className = "min-w-[85vw] md:min-w-0 snap-start py-8 px-2 md:px-0";
         card.innerHTML = `
@@ -146,6 +157,13 @@ function renderCourses(list) {
         grid.appendChild(card);
         observer.observe(card);
     });
+
+    // Handle Load More visibility
+    if (isDesktop && list.length > displayLimit) {
+        loadMoreContainer.classList.remove('hidden');
+    } else {
+        loadMoreContainer.classList.add('hidden');
+    }
 }
 
 // Global Filtering Logic
@@ -153,17 +171,18 @@ let activeCategory = 'todos';
 let searchQuery = '';
 
 function filterAndRender() {
-    const filtered = allCourses.filter(course => {
+    currentFilteredList = allCourses.filter(course => {
         const matchesCategory = activeCategory === 'todos' || course.category === activeCategory;
         const matchesSearch = course.name.toLowerCase().includes(searchQuery.toLowerCase());
         return matchesCategory && matchesSearch;
     });
-    renderCourses(filtered);
+    renderCourses(currentFilteredList);
 }
 
 // Event Listeners
 document.getElementById('course-search')?.addEventListener('input', (e) => {
     searchQuery = e.target.value;
+    displayLimit = initialLimit; // Reset limit on search
     filterAndRender();
 });
 
@@ -177,8 +196,14 @@ document.querySelectorAll('.course-tab').forEach(tab => {
         tab.classList.remove('bg-slate-50', 'text-slate-500');
 
         activeCategory = tab.getAttribute('data-category');
+        displayLimit = initialLimit; // Reset limit on tab change
         filterAndRender();
     });
+});
+
+document.getElementById('load-more-btn')?.addEventListener('click', () => {
+    displayLimit += 9;
+    renderCourses(currentFilteredList);
 });
 
 // Mobile Menu Logic
@@ -223,7 +248,7 @@ document.querySelectorAll('.faq-trigger').forEach(trigger => {
 
 // Initial Render and Observer Initialization
 function init() {
-    renderCourses(allCourses);
+    filterAndRender();
 
     // Observe all static fade-in elements
     document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
