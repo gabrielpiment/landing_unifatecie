@@ -145,7 +145,7 @@ function renderCourses(list) {
                         Duração: ${course.duration}
                     </p>
                 </div>
-                <p class="text-slate-500 text-sm mb-8 line-clamp-2">Inicie sua carreira na UniFatecie-MG com o melhor suporte EAD.</p>
+                <p class="text-slate-500 text-sm mb-8 line-clamp-2">Inicie sua carreira no Megapolo Unifatecie com o melhor suporte EAD.</p>
                 <div class="mt-auto">
                     <a href="https://wa.me/5534998630055?text=${encodeURIComponent('Olá vim pelo site e gostaria de saber mais sobre o curso ' + course.name)}" target="_blank" class="w-full bg-white border border-slate-200 text-slate-700 py-3 md:py-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 hover:bg-primary-custom hover:text-white hover:border-primary-custom transition-all">
                         Falar com Consultor
@@ -214,11 +214,24 @@ const mobileMenu = document.getElementById('mobile-menu');
 mobileMenuBtn?.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
 closeMenuBtn?.addEventListener('click', () => mobileMenu.classList.add('hidden'));
 
+// Close mobile menu when any link inside it is clicked (including WhatsApp/External)
+mobileMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+});
+
 // Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
+        
+        // Close mobile menu if open
+        if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+        }
+
         if (target) window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
     });
 });
