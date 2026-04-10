@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Unifatecie-MG | Excelência Acadêmica</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body class="bg-background text-on-surface font-body selection:bg-orange-100 selection:text-primary-custom">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-sm border-b border-slate-100">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <a href="/" class="flex items-center">
+                <img src="/assets/logo.png" alt="UniFatecie" class="h-10 md:h-12 w-auto object-contain">
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a class="font-headline font-semibold tracking-tight text-primary-custom border-b-2 border-primary-custom pb-1"
+                    href="#cursos">Cursos</a>
+                <a class="font-headline font-semibold tracking-tight text-slate-600 hover:text-primary-custom transition-colors"
+                    href="#ead">EAD</a>
+                <a class="font-headline font-semibold tracking-tight text-slate-600 hover:text-primary-custom transition-colors"
+                    href="#polo">Polo Uberlândia</a>
+                <a class="font-headline font-semibold tracking-tight text-slate-600 hover:text-primary-custom transition-colors"
+                    href="#sobre">Sobre</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/5534998630055?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20iniciar%20minha%20matrícula%20na%20UniFatecie"
+                    target="_blank"
+                    class="bg-primary-custom hover:opacity-90 text-white px-6 py-2.5 rounded-lg font-headline font-bold text-sm transition-all shadow-lg shadow-orange-500/20 active:scale-95 text-center">
+                    Inscreva-se
+                </a>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn"
+                    class="md:hidden material-symbols-outlined text-slate-900 border-none bg-transparent cursor-pointer">menu</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white hidden flex-col p-8 transition-all">
+        <div class="flex justify-between items-center mb-12">
+            <a href="/" class="flex items-center">
+                <img src="/assets/logo.png" alt="UniFatecie" class="h-8 w-auto object-contain">
+            </a>
+            <button id="close-menu-btn" class="material-symbols-outlined text-3xl">close</button>
+        </div>
+        <div class="flex flex-col gap-6 text-2xl font-headline font-bold">
+            <a href="#cursos" class="text-primary-custom">Cursos</a>
+            <a href="#ead" class="text-slate-600">EAD</a>
+            <a href="#polo" class="text-slate-600">Polo Uberlândia</a>
+            <a href="#sobre" class="text-slate-600">Sobre</a>
+        </div>
+        <div class="mt-auto">
+            <button
+                class="w-full bg-primary-custom text-white py-4 rounded-xl font-headline font-bold shadow-xl shadow-orange-500/20">
+                Inscreva-se Agora
+            </button>
+        </div>
+    </div>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[85vh] flex items-center overflow-hidden px-8 bg-white">
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 z-10 fade-in-up">
+                    <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mb-8">
+                        <span
+                            class="font-headline text-[10px] md:text-sm uppercase tracking-[0.3em] text-primary-custom font-extrabold px-4 py-2 bg-orange-50 rounded-full">
+                            Educação Superior de Elite
+                        </span>
+                        <span
+                            class="bg-emerald-500 text-white text-[10px] font-bold px-4 py-2 rounded-full uppercase tracking-widest shadow-lg shadow-emerald-500/20 animate-pulse">
+                            Matrícula Grátis
+                        </span>
+                    </div>
+                    <h1
+                        class="font-headline text-4xl md:text-8xl font-extrabold text-on-surface leading-[1.1] tracking-tighter mb-8">
+                        Onde a Tradição <br />
+                        <span class="text-primary-custom">Encontra o Futuro.</span>
+                    </h1>
+                    <p class="text-slate-500 text-base md:text-2xl max-w-xl mb-10 leading-relaxed font-light">
+                        Flexibilidade para o seu tempo, rigor para o seu aprendizado. A Unifatecie-MG traz o melhor do
+                        EAD para Uberlândia.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/5534998630055?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20iniciar%20minha%20matrícula%20na%20UniFatecie"
+                            target="_blank"
+                            class="bg-primary-custom text-white px-8 py-4 rounded-2xl font-headline font-bold text-lg shadow-xl shadow-orange-500/30 hover:shadow-orange-500/40 transition-all active:scale-95 text-center">
+                            Iniciar Matrícula
+                        </a>
+                        <a href="#cursos"
+                            class="bg-white border border-slate-200 text-slate-700 px-8 py-4 rounded-2xl font-headline font-bold text-lg hover:border-primary-custom hover:text-primary-custom transition-all text-center">
+                            Conhecer Cursos
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 relative fade-in-up" style="transition-delay: 200ms;">
+                    <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative z-10 group">
+                        <img alt="Student studying"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            src="/assets/hero.png" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                        <div
+                            class="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl border border-white/50 z-20">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center text-white">
+                                    <span class="material-symbols-outlined text-lg">celebration</span>
+                                </div>
+                                <div>
+                                    <div
+                                        class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter leading-none mb-1">
+                                        Oferta Limitada</div>
+                                    <div class="text-sm font-bold text-slate-800 leading-none">Matrícula 100% Grátis
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Decorative elements -->
+                    <div
+                        class="absolute -top-12 -right-12 w-64 h-64 bg-orange-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-pulse">
+                    </div>
+                    <div
+                        class="absolute -bottom-12 -left-12 w-64 h-64 bg-slate-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promotional Highlight -->
+        <section class="bg-slate-50 py-16 px-8 border-b border-slate-100">
+            <div class="max-w-4xl mx-auto text-center fade-in-up">
+                <h3 class="font-headline text-2xl md:text-5xl font-extrabold text-slate-900 mb-3 tracking-tighter">
+                    Estude com parcelas a partir de <span class="text-primary-custom">R$ 56,25</span> mensais.
+                </h3>
+                <p class="font-headline text-xl md:text-3xl font-bold text-slate-800 mb-6">
+                    Corre que as vagas são limitadas!
+                </p>
+                <div
+                    class="inline-flex items-center gap-2 text-slate-500 font-medium bg-white px-6 py-2 rounded-full border border-slate-100 shadow-sm">
+                    Viva os melhores anos de sua vida na <span class="font-bold text-slate-900 ml-1">UniFatecie
+                        EAD</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="py-24 bg-surface-bright border-y border-slate-100 px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16 fade-in-up">
+                    <p class="text-primary-custom font-bold text-sm tracking-[0.3em] uppercase mb-4">Números que
+                        Impressionam</p>
+                    <h2 class="font-headline text-3xl md:text-5xl font-extrabold text-slate-800">Uma rede em constante
+                        crescimento</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 text-center">
+                    <div class="space-y-2 fade-in-up" style="transition-delay: 100ms;">
+                        <div class="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tighter">+4500</div>
+                        <div class="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">Alunos
+                            Formados</div>
+                    </div>
+                    <div class="space-y-2 fade-in-up" style="transition-delay: 200ms;">
+                        <div class="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tighter">+20k</div>
+                        <div class="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">Alunos
+                            Ativos</div>
+                    </div>
+                    <div class="space-y-2 fade-in-up" style="transition-delay: 300ms;">
+                        <div class="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tighter">+500</div>
+                        <div class="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">Polos no
+                            Brasil</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MEC 5 Section -->
+        <section class="bg-black py-20 px-8 text-center overflow-hidden">
+            <div class="max-w-4xl mx-auto fade-in-up">
+                <div class="mb-6 relative inline-block">
+                    <img src="/assets/mec_badge.png" alt="MEC Nota 5" class="w-40 md:w-64 mx-auto">
+                </div>
+                <h2 class="font-headline text-3xl md:text-5xl font-extrabold text-white mb-6 uppercase tracking-tight">
+                    EAD <span class="text-primary-custom">UniFatecie 2026</span>
+                </h2>
+                <p class="text-primary-custom text-lg md:text-2xl font-bold leading-relaxed max-w-2xl mx-auto">
+                    Aproveite essa oportunidade e faça sua graduação na universidade que é nota máxima no MEC!
+                </p>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="cursos" class="py-16 bg-white px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-10 fade-in-up">
+                    <span class="text-primary-custom font-bold text-sm uppercase tracking-[0.3em] mb-4 block">Excelência
+                        em Cada Área</span>
+                    <h2 class="font-headline text-4xl md:text-6xl font-extrabold text-slate-800 mb-8 tracking-tight">
+                        Cursos Disponíveis</h2>
+
+                    <!-- Search Bar -->
+                    <div class="max-w-2xl mx-auto mb-12 relative group">
+                        <span
+                            class="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary-custom transition-colors">search</span>
+                        <input type="text" id="course-search"
+                            placeholder="Qual curso você procura? (ex: Engenharia, Design...)"
+                            class="w-full bg-slate-50 border border-slate-200 rounded-2xl py-5 px-14 font-headline text-slate-700 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-primary-custom transition-all shadow-sm">
+                    </div>
+
+                    <!-- Category Tabs -->
+                    <div class="flex flex-wrap justify-center gap-3 mb-12">
+                        <button
+                            class="course-tab active bg-primary-custom text-white px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-orange-500/20"
+                            data-category="todos">Todos</button>
+                        <button
+                            class="course-tab bg-slate-50 text-slate-500 hover:text-primary-custom px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-wider transition-all"
+                            data-category="Bacharelado">Bacharelado</button>
+                        <button
+                            class="course-tab bg-slate-50 text-slate-500 hover:text-primary-custom px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-wider transition-all"
+                            data-category="Tecnólogo">Tecnólogo</button>
+                        <button
+                            class="course-tab bg-slate-50 text-slate-500 hover:text-primary-custom px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-wider transition-all"
+                            data-category="Licenciatura">Licenciatura</button>
+                        <button
+                            class="course-tab bg-slate-50 text-slate-500 hover:text-primary-custom px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-wider transition-all"
+                            data-category="pos">Pós & MBA</button>
+                        <button
+                            class="course-tab bg-slate-50 text-slate-500 hover:text-primary-custom px-6 py-2.5 rounded-full font-bold text-xs uppercase tracking-wider transition-all"
+                            data-category="2grad">2ª Graduação</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Course Grid -->
+            <div id="course-grid"
+                class="flex flex-nowrap overflow-x-auto snap-x snap-mandatory gap-6 pb-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:overflow-visible md:snap-none md:gap-8 scrollbar-hide">
+                <!-- Courses will be injected here by main.js -->
+            </div>
+
+            <div id="no-results" class="hidden py-20 text-center fade-in-up">
+                <span class="material-symbols-outlined text-6xl text-slate-300 mb-4 block">search_off</span>
+                <p class="text-slate-500 font-medium">Nenhum curso encontrado para sua busca.</p>
+            </div>
+
+            <div class="mt-10 text-center fade-in-up">
+                <p class="text-slate-500 mb-6 italic">Não encontrou o curso que procurava?</p>
+                <a href="https://wa.me/5534998630055?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20UniFatecie"
+                    target="_blank"
+                    class="inline-flex items-center gap-3 text-primary-custom font-bold hover:gap-5 transition-all">
+                    Consultar Lista Completa no WhatsApp
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section with Video -->
+
+        <section id="sobre" class="py-32 bg-white px-8">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                <div class="relative group cursor-pointer fade-in-up">
+                    <div
+                        class="aspect-video rounded-3xl overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] relative">
+                        <iframe 
+                            class="w-full h-full"
+                            src="https://www.youtube.com/embed/xeKs2wZgL40" 
+                            title="Conheça a UniFatecie" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="absolute -bottom-8 -right-8 glass p-6 rounded-2xl shadow-xl flex items-center gap-4 fade-in-up"
+                        style="transition-delay: 400ms;">
+                        <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-primary-custom">verified</span>
+                        </div>
+                        <div>
+                            <div class="text-sm font-bold text-slate-900">MEC Grau 5</div>
+                            <div class="text-xs text-slate-500">Conceito Máximo</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-8 fade-in-up">
+                    <span class="text-primary-custom font-bold text-sm uppercase tracking-[0.3em]">Nossa
+                        Estrutura</span>
+                    <h2 class="font-headline text-4xl md:text-6xl font-extrabold text-slate-800 leading-tight">Conheça a
+                        UniFatecie</h2>
+                    <p class="text-slate-600 text-xl leading-relaxed font-light">
+                        A UniFatecie oferece os melhores cursos de Graduação e Pós Graduação EAD reconhecidos e com
+                        conceito máximo pelo MEC! Nossa metodologia foca na aplicabilidade prática e excelência
+                        acadêmica.
+                    </p>
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-3 text-slate-700 font-medium">
+                            <span class="material-symbols-outlined text-primary-custom">check_circle</span>
+                            Conteúdo Interativo e Moderno
+                        </div>
+                        <div class="flex items-center gap-3 text-slate-700 font-medium">
+                            <span class="material-symbols-outlined text-primary-custom">check_circle</span>
+                            Suporte 24/7 para Alunos
+                        </div>
+                        <div class="flex items-center gap-3 text-slate-700 font-medium">
+                            <span class="material-symbols-outlined text-primary-custom">check_circle</span>
+                            Diplomas Reconhecidos Nacionalmente
+                        </div>
+                    </div>
+                    <button
+                        class="bg-primary-custom text-white px-10 py-4 rounded-xl font-bold uppercase tracking-widest text-sm hover:translate-x-2 transition-all flex items-center gap-3">
+                        Saiba Mais Sobre Nós
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values/Vision/Mission Section -->
+        <section class="py-32 bg-slate-50 px-8 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <!-- Valores -->
+                    <div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-shadow fade-in-up">
+                        <div class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center mb-8">
+                            <span class="material-symbols-outlined text-primary-custom text-4xl">lightbulb</span>
+                        </div>
+                        <h3 class="font-headline font-bold text-2xl text-slate-800 mb-4 uppercase tracking-tight">
+                            Valores</h3>
+                        <p class="text-slate-600 text-base leading-relaxed font-light">
+                            Comprometimento, Hospitalidade, Inovação, Respeito, Responsabilidade Social,
+                            Sustentabilidade e Transparência.
+                        </p>
+                    </div>
+                    <!-- Visão -->
+                    <div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-shadow fade-in-up"
+                        style="transition-delay: 100ms;">
+                        <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-8">
+                            <span class="material-symbols-outlined text-blue-600 text-4xl">visibility</span>
+                        </div>
+                        <h3 class="font-headline font-bold text-2xl text-slate-800 mb-4 uppercase tracking-tight">Visão
+                        </h3>
+                        <p class="text-slate-600 text-base leading-relaxed font-light">
+                            Ser reconhecida como um Grupo Educacional de excelência, consolidado no ensino nos seus
+                            diversos níveis e modalidades.
+                        </p>
+                    </div>
+                    <!-- Missão -->
+                    <div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-shadow fade-in-up"
+                        style="transition-delay: 200ms;">
+                        <div class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mb-8">
+                            <span class="material-symbols-outlined text-green-600 text-4xl">target</span>
+                        </div>
+                        <h3 class="font-headline font-bold text-2xl text-slate-800 mb-4 uppercase tracking-tight">Missão
+                        </h3>
+                        <p class="text-slate-600 text-base leading-relaxed font-light">
+                            Promover educação transformadora, inclusiva e de qualidade, contribuindo para o
+                            desenvolvimento humano.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FAQ Section -->
+    <section class="py-24 bg-white px-8" id="faq">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="font-headline text-3xl md:text-5xl font-extrabold text-slate-800 mb-4">Dúvidas Frequentes
+                </h2>
+                <p class="text-slate-500">Encontre respostas para as perguntas mais comuns</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-slate-50 transition-colors group">
+                        <span
+                            class="font-bold text-slate-700 md:text-lg group-hover:text-primary-custom transition-colors">O
+                            curso de Graduação EaD é credenciado pelo MEC?</span>
+                        <span
+                            class="material-symbols-outlined text-primary-custom transition-transform duration-300">expand_more</span>
+                    </button>
+                    <div class="faq-content hidden p-6 pt-0 border-t border-slate-100 bg-slate-50/50">
+                        <p class="text-slate-600 leading-relaxed py-4">
+                            A instituição é nota máxima no MEC, temos o conceito máximo 5. Nossos cursos de graduação
+                            são credenciados junto ao MEC através da Portaria 1.179 de 5/12/2007. Confira o nosso
+                            credenciamento junto ao MEC em:
+                            <a href="https://tiny.one/credenciamento-UNIFATECIE" target="_blank"
+                                class="text-primary-custom font-bold hover:underline">tiny.one/credenciamento-UNIFATECIE</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-slate-50 transition-colors group">
+                        <span
+                            class="font-bold text-slate-700 md:text-lg group-hover:text-primary-custom transition-colors">Como
+                            faço para ingressar?</span>
+                        <span
+                            class="material-symbols-outlined text-primary-custom transition-transform duration-300">expand_more</span>
+                    </button>
+                    <div class="faq-content hidden p-6 pt-0 border-t border-slate-100 bg-slate-50/50">
+                        <div class="py-4 space-y-4">
+                            <p class="text-slate-600 leading-relaxed">Temos vagas remanescente, assim você consegue
+                                ingressar de imediato.</p>
+                            <a href="https://wa.me/5534998630055?text=Olá,%20gostaria%20de%20realizar%20minha%20pré-inscrição"
+                                target="_blank"
+                                class="text-primary-custom font-bold hover:underline uppercase text-sm">CLIQUE AQUI PARA
+                                REALIZAR SUA PRÉ-INSCRIÇÃO</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-slate-50 transition-colors group">
+                        <span
+                            class="font-bold text-slate-700 md:text-lg group-hover:text-primary-custom transition-colors">Como
+                            funciona a graduação ead ?</span>
+                        <span
+                            class="material-symbols-outlined text-primary-custom transition-transform duration-300">expand_more</span>
+                    </button>
+                    <div class="faq-content hidden p-6 pt-0 border-t border-slate-100 bg-slate-50/50">
+                        <div class="py-4 space-y-4 text-slate-600">
+                            <p class="font-bold text-slate-800 flex items-center gap-2">📚 PROPOSTA PEDAGÓGICA É SIMPLES
+                                E PRÁTICA 📚</p>
+                            <p>O curso é acessado através de uma plataforma educacional com material em pdf e
+                                videoaulas, que segue um cronograma disponível no AVA, sendo:</p>
+                            <ul class="space-y-2 list-none ml-2">
+                                <li class="flex items-start gap-2">↪️ Em torno de três disciplinas a cada três meses
+                                </li>
+                                <li class="flex items-start gap-2">↪️ Provas online por disciplina;</li>
+                                <li class="flex items-start gap-2">↪️ Lives com a tutoria da disciplina;</li>
+                                <li class="flex items-start gap-2">↪️ 2 encontros presenciais no Polo para realizar as
+                                    *AVALIAÇÕES FINAIS iniciando após o primeiro ano de graduação.</li>
+                                <li class="flex items-start gap-2">↪️ Tutoria online para apoio pedagógico.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-slate-50 transition-colors group">
+                        <span
+                            class="font-bold text-slate-700 md:text-lg group-hover:text-primary-custom transition-colors">Atividades
+                            Práticas - Apenas para Área da Saúde</span>
+                        <span
+                            class="material-symbols-outlined text-primary-custom transition-transform duration-300">expand_more</span>
+                    </button>
+                    <div class="faq-content hidden p-6 pt-0 border-t border-slate-100 bg-slate-50/50">
+                        <ul class="py-4 space-y-4 text-slate-600">
+                            <li class="flex items-start gap-2">🎓 Precisará comparecer ao polo ao final de cada semestre
+                                para realizar as avaliações.</li>
+                            <li class="flex items-start gap-2">🎓 Para os cursos da área da saúde: As AULAS PRÁTICAS
+                                iniciam no 3º ano, aconteceram algumas aulas presenciais. Serão de 3 a 8 encontros
+                                durante todo o ano que serão realizadas em empresas conveniadas ao polo.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-slate-50 transition-colors group">
+                        <span
+                            class="font-bold text-slate-700 md:text-lg group-hover:text-primary-custom transition-colors">Como
+                            ocorre o estudo e o ensino no Ead ?</span>
+                        <span
+                            class="material-symbols-outlined text-primary-custom transition-transform duration-300">expand_more</span>
+                    </button>
+                    <div class="faq-content hidden p-6 pt-0 border-t border-slate-100 bg-slate-50/50">
+                        <div class="py-4 space-y-4 text-slate-600">
+                            <p class="flex items-start gap-2">📄 Após a liberação do acesso ao ambiente de estudos o
+                                aluno tem acesso ao portal do aluno ( Aluno net), onde terá acesso ao financeiro,
+                                requerimentos, protocolos, boletos, declarações e toda essa parte mais burocrática.</p>
+                            <p class="flex items-start gap-2">📚 *Moodle* onde o aluno terá acesso as aulas gravadas,
+                                apostilas no formato digital (caso o aluno queira imprimir, fica ao seu critério),
+                                slides das aulas, atividades, fóruns, provas curriculares e chat online com o tutor para
+                                tirar suas dúvidas.</p>
+                            <p class="flex items-start gap-2">📱 O moodle pode ser acessado tanto pelo site no
+                                computador, quanto no aplicativo de telefone.</p>
+                            <p class="flex items-start gap-2">🎓 No ensino EAD, o aluno tem a *liberdade de fazer seus
+                                horários de estudo* pois cada disciplina será trabalhada, individualmente, através de
+                                aulas gravadas, trabalhos e atividades objetivas e também dissertativas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-slate-50 transition-colors group">
+                        <span
+                            class="font-bold text-slate-700 md:text-lg group-hover:text-primary-custom transition-colors">Quais
+                            os canais terei para me orientar durante a graduação?</span>
+                        <span
+                            class="material-symbols-outlined text-primary-custom transition-transform duration-300">expand_more</span>
+                    </button>
+                    <div class="faq-content hidden p-6 pt-0 border-t border-slate-100 bg-slate-50/50">
+                        <p class="text-slate-600 leading-relaxed py-4">
+                            É disponibilizado acesso ao tutor no ambiente do aluno, bem como o nossa assistente virtual,
+                            como o contato do suporte ao aluno via whatsapp. Durante toda a graduação, o aluno terá o
+                            auxílio de um professor tutor que o atenderá tirando dúvidas pertinentes ao pedagógico.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-slate-50 transition-colors group">
+                        <span
+                            class="font-bold text-slate-700 md:text-lg group-hover:text-primary-custom transition-colors">Como
+                            funciona o estágio ?</span>
+                        <span
+                            class="material-symbols-outlined text-primary-custom transition-transform duration-300">expand_more</span>
+                    </button>
+                    <div class="faq-content hidden p-6 pt-0 border-t border-slate-100 bg-slate-50/50">
+                        <p class="text-slate-600 leading-relaxed py-4">
+                            Para os cursos que são exigidos os estágios, os alunos terão a liberdade de escolherem a
+                            empresa que poderão aplicar seu estágio. A empresa pode ser na cidade onde o aluno mora, ou
+                            seja, não é obrigatório que seja na cidade do polo.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-slate-50 transition-colors group">
+                        <span
+                            class="font-bold text-slate-700 md:text-lg group-hover:text-primary-custom transition-colors">Quais
+                            os documentos são necessário para realizar a inscrição ?</span>
+                        <span
+                            class="material-symbols-outlined text-primary-custom transition-transform duration-300">expand_more</span>
+                    </button>
+                    <div class="faq-content hidden p-6 pt-0 border-t border-slate-100 bg-slate-50/50">
+                        <div class="py-4 space-y-4 text-slate-600">
+                            <p>Nenhum documentos é preciso inicialmente, porém é preciso anexar foto ou PDF e enviado
+                                até 3 meses após o ingresso. 📥</p>
+                            <p class="font-bold text-slate-800">📩 DOCUMENTAÇÃO NECESSÁRIA:</p>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 list-none">
+                                <li class="flex items-center gap-2">▶️ RG</li>
+                                <li class="flex items-center gap-2">▶️ CPF</li>
+                                <li class="flex items-center gap-2">▶️ Comprovante de residência</li>
+                                <li class="flex items-center gap-2">▶️ Histórico de conclusão do ensino médio
+                                    (certificado)</li>
+                                <li class="flex items-center gap-2">▶️ Certidão de nascimento, casamento ou divórcio
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 9 -->
+                <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button
+                        class="faq-trigger w-full flex items-center justify-between p-6 text-left hover:bg-slate-50 transition-colors group">
+                        <span
+                            class="font-bold text-slate-700 md:text-lg group-hover:text-primary-custom transition-colors">Quais
+                            as formas de pagamento ?</span>
+                        <span
+                            class="material-symbols-outlined text-primary-custom transition-transform duration-300">expand_more</span>
+                    </button>
+                    <div class="faq-content hidden p-6 pt-0 border-t border-slate-100 bg-slate-50/50">
+                        <p class="text-slate-600 leading-relaxed py-4">
+                            Os boletos das mensalidade são disponibilizados na aba FINANCEIRO que pode ser pago no
+                            boleto, pix ou no cartão.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white w-full py-20 px-8 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
+                <div class="space-y-6 max-w-sm">
+                    <img src="/assets/logo.png" alt="UniFatecie" class="h-12 w-auto object-contain mb-4">
+                    <p class="text-slate-500 leading-relaxed font-light italic">
+                        "Transformando o futuro através da Excelência Acadêmica e inovação constante no ensino
+                        superior."
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-primary-custom hover:text-white transition-all">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <!-- Add FontAwesome if needed or keep Material Icons -->
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 gap-12 w-full lg:w-auto">
+                    <div class="space-y-4">
+                        <h4 class="font-bold text-slate-800 uppercase text-xs tracking-[0.2em]">Institucional</h4>
+                        <ul class="space-y-2 text-slate-500 text-sm">
+                            <li><a href="#sobre" class="hover:text-primary-custom transition-colors">Sobre Nós</a></li>
+                            <li><a href="#polo" class="hover:text-primary-custom transition-colors">Polos</a></li>
+                            <li><a href="#cursos" class="hover:text-primary-custom transition-colors">Cursos</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-slate-50 flex flex-col items-center text-center gap-6">
+                <div class="space-y-4 max-w-3xl">
+                    <p class="text-slate-800 font-bold text-sm tracking-widest">© 2026 UniFatecie EAD</p>
+                    <p class="text-slate-500 text-[11px] leading-relaxed italic">
+                        🔎 <span class="font-bold">Aviso de transparência:</span> Esta página é gerenciada por um
+                        consultor educacional parceiro do Polo UniFatecie Uberlândia MG. A atuação ocorre com
+                        autorização da instituição para prestar atendimento personalizado, orientar os interessados e
+                        facilitar a matrícula no polo credenciado de Uberlândia. Todas as condições aqui apresentadas
+                        seguem as diretrizes e ofertas públicas da UniFatecie.
+                    </p>
+                </div>
+                <div class="text-slate-400 text-[10px] items-center flex gap-2">
+                    <span class="material-symbols-outlined text-sm">shield</span>
+                    Site Seguro & Certificado
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a class="fixed bottom-10 right-10 z-[70] bg-[#25D366] text-white p-5 rounded-full shadow-[0_20px_40px_rgba(37,211,102,0.4)] hover:scale-110 hover:rotate-6 transition-all active:scale-95 group flex items-center gap-3"
+        href="https://wa.me/5534998630055?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20UniFatecie"
+        target="_blank">
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+            <path
+                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.56 5.338-11.891 11.895-11.891 3.181 0 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.481 8.403 0 6.561-5.338 11.892-11.893 11.892-1.997 0-3.951-.5-5.688-1.448l-6.307 1.664zm6.222-3.614c1.559.924 3.415 1.433 5.4 1.434 5.625 0 10.201-4.57 10.201-10.187 0-2.707-1.053-5.251-2.964-7.163-1.912-1.912-4.458-2.965-7.165-2.965-5.627 0-10.203 4.574-10.203 10.191 0 2.159.68 4.257 1.966 6.009l-1.047 3.825 3.912-1.031c.041.001.08.001.121.001zm11.233-7.531c-.305-.152-1.801-.889-2.08-.989-.279-.099-.483-.151-.686.152-.203.303-.787.989-.965 1.191-.177.202-.354.227-.659.076-.305-.152-1.285-.473-2.448-1.511-.904-.806-1.513-1.802-1.69-2.105-.177-.302-.019-.466.133-.616.137-.135.305-.353.457-.53.152-.177.203-.302.304-.504.102-.202.051-.378-.026-.53-.076-.152-.686-1.651-.939-2.258-.247-.591-.5-.511-.686-.521-.177-.008-.381-.01-.583-.01-.203 0-.533.076-.812.379-.279.303-1.066 1.035-1.066 2.525s1.091 2.929 1.243 3.131c.152.202 2.148 3.276 5.198 4.59.726.313 1.291.5 1.731.64.73.232 1.391.199 1.915.121.583-.087 1.801-.737 2.055-1.448.254-.711.254-1.32.177-1.448-.077-.127-.279-.202-.584-.354z">
+            </path>
+        </svg>
+        <div
+            class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 whitespace-nowrap font-headline font-bold text-lg">
+            Fale Conosco
+        </div>
+    </a>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
