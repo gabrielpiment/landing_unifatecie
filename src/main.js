@@ -224,15 +224,27 @@ mobileMenu?.querySelectorAll('a').forEach(link => {
 // Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        if (href === '#') return;
         
-        // Close mobile menu if open
-        if (!mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
-        }
+        const target = document.querySelector(href);
+        if (target) {
+            e.preventDefault();
+            
+            // Close mobile menu if open
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
 
-        if (target) window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+            const headerOffset = 80;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
     });
 });
 
