@@ -271,9 +271,27 @@ document.querySelectorAll('.faq-trigger').forEach(trigger => {
     });
 });
 
+// Gallery Carousel Navigation logic
+function initGalleryNavigation() {
+    const galleryContainer = document.getElementById('gallery-container');
+    const prevBtn = document.getElementById('prev-gallery');
+    const nextBtn = document.getElementById('next-gallery');
+
+    if (galleryContainer && prevBtn && nextBtn) {
+        const scrollAmount = 480; // Item width + gap approx
+        prevBtn.addEventListener('click', () => {
+            galleryContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+        nextBtn.addEventListener('click', () => {
+            galleryContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+    }
+}
+
 // Initial Render and Observer Initialization
 function init() {
     filterAndRender();
+    initGalleryNavigation();
 
     // Observe all static fade-in elements
     document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
