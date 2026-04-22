@@ -129,8 +129,8 @@ function renderCourses(list) {
         card.innerHTML = `
             <div class="bg-white p-6 md:p-8 rounded-3xl border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] flex flex-col h-full group transition-all duration-300">
                 <div class="flex justify-between items-start mb-6">
-                    <div class="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-primary-custom group-hover:bg-primary-custom group-hover:text-white transition-colors duration-500">
-                        <span class="material-symbols-outlined text-3xl">${course.icon}</span>
+                    <div class="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-primary-custom group-hover:bg-primary-custom transition-colors duration-500">
+                        <span class="material-symbols-outlined text-3xl group-hover:text-white transition-colors duration-500">${course.icon}</span>
                     </div>
                     <div class="flex flex-col gap-1 items-end">
                         <span class="bg-orange-50 text-primary-custom text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">70% OFF</span>
